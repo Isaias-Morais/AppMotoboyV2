@@ -1,8 +1,5 @@
-from validacoes.motoboy_validacao import validacao_motoboy
-
 class Motoboy:
-    def __init__(self,id=None,nome="",idade=0,email=''):
-        self._id = id
+    def __init__(self,nome="",idade=0,email=''):
         self._nome = nome
         self._idade = idade
         self._email = email
