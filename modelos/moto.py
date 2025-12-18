@@ -1,6 +1,3 @@
-from datetime import datetime
-from validacoes.abasteciento_validacao import validacao_abastecimento
-
 class Moto:
 
     def __init__(self,modelo,cor,quilometragem = 0):
@@ -9,33 +6,4 @@ class Moto:
         self._quilometragem_total = int(quilometragem)
 
     def __str__(self):
-        return f"{self._modelo},{self._cor}"
-
-    def Registra_Abastecimento(self,valor,litros,completo = False,quilometragem_de_abastecimento = None,  data = None):
-
-    def Registra_Manutencao(self,peca='',valor_servico=0,quilometragem_de_troca=None, data = None):
-
-        # if not isinstance(valor_servico, (int , float)):
-        #     return 'Digite um valor valido'
-        # if quilometragem_de_troca is None:
-        #     quilometragem_de_troca = 0
-        # if not isinstance(quilometragem_de_troca,(int,float)):
-        #     return  'Digite uma quilometragem de troca '
-        # dia = data or datetime.today()
-        # if not isinstance(dia,(datetime)):
-        #     return 'Digite uma data valida'
-        # else:
-        #     if quilometragem_de_troca > self._quilometragem_total:
-        #         self._quilometragem_total = quilometragem_de_troca
-        #     registro = {
-        #         'Dia':dia.strftime('%d/%m/%Y'),
-        #         'Peça_trocada':peca,
-        #         'Valor':valor_servico,
-        #         'Quilometragem_de_troca':quilometragem_de_troca
-        #     }
-
-
-
-
-
-
+        return f"modelo-{self._modelo},cor-{self._cor},quilometragem-{self._quilometragem_total}"
