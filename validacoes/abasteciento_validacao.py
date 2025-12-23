@@ -7,6 +7,7 @@ def validacao_abastecimento(
         valor = 0,
         completo = False,
         quilometragem_abastecimento = None,
+        moto_id = None
 
     ):
 
@@ -20,6 +21,8 @@ def validacao_abastecimento(
         return False, f'Digite um valor bool valido'
     if not isinstance(quilometragem_abastecimento,(int, float)) or quilometragem_abastecimento < 0:
         return False, f'Digite quilometragem valida'
+    if not isinstance(moto_id,(int)) or moto_id <= 0:
+        return False, f'Digite um id valido'
     if not data:
         data_final = datetime.now()
     else:
