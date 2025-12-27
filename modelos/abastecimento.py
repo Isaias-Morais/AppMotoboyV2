@@ -8,7 +8,7 @@ class Abastecimento:
             valor=0,
             tanque_completo = False,
             quilometragem_abastecimento = None,
-            moto_id = 0
+            moto_id = None
         ):
         self._data = data
         self._valor = valor
@@ -17,6 +17,7 @@ class Abastecimento:
         self._qilometragem = quilometragem_abastecimento
         self._posto = posto
         self._moto = moto_id
+        self.id = None
 
     def __str__(self):
         return f'data-{self._data},valor-{self._valor},litros-{self._liros}taque_cheio{self._tcompleto},quilometro_do_abastecimento{self._tcompleto}'

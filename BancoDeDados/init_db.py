@@ -4,6 +4,7 @@ def criar_tabelas():
     criar_tabela_motos()
     criar_tabela_abatecimento()
     criar_tabela_manutencao()
+    criar_tabela_dia_de_trabalho()
 
 def criar_tabela_motoboy():
     conn = get_conexao()
@@ -83,5 +84,24 @@ def criar_tabela_manutencao():
             )
         '''
         )
+    conn.commit()
+    conn.close()
+
+def criar_tabela_dia_de_trabalho():
+    conn = get_conexao()
+    curso = get_conexao()
+    curso.execute(
+        '''
+            CREATE TABLE IF NOT EXISTS dias_de_trabalho(
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            moto_id INTEGER NOT NULL,
+            data_trabalhada DATA,
+            quilometragem_inicial INTEGER NOT NULL,
+            quilometragem_final INTEGER NOT NULL,
+            ganho_bruto REAL NOT NULL,
+            FOREIGN KEY (moto_id) references moto(id)
+            )     
+        '''
+    )
     conn.commit()
     conn.close()
