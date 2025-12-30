@@ -6,5 +6,5 @@ from BancoDeDados.init_db import criar_tabelas
 
 import sqlite3
 
-registra_abastecimento(1,12,2025,'ipiranga',10,6,True,1000,1)
+registra_abastecimento(1,12,2025,'ipiranga',10,6,True,2000,1)
 listar_abastecimento()
