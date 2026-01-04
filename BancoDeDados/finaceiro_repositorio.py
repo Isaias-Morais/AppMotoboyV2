@@ -92,5 +92,24 @@ def busca_abastecimento_consumo_medio(moto_id):
     conn.close()
 
     return dados
-teste = busca_abastecimento_consumo_medio(1)
-print(teste)
+
+
+
+def busca_consumo_moto(moto_id):
+    conn = get_conexao()
+    cursor = conn.cursor()
+    sql = '''
+        SELECT
+            mo.cosumo AS consumo
+        FROM moto mo
+        JOIN moto m ON m.id = m.id
+        WHERE m.id =?
+    '''
+
+    cursor.execute(sql,(moto_id,))
+    consumo = cursor.fetchone()
+    conn.close()
+
+    return consumo
+
+print(busca_consumo_moto(1))
