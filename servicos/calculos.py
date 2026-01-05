@@ -1,6 +1,6 @@
 def calcular_preco_medio_combustivel(valor=0,litros=0 ):
     if valor <=0 or litros <= 0:
-        return False, 'parametro invalido'
+        return 0
 
     preco_litro = valor/litros
 
@@ -8,15 +8,15 @@ def calcular_preco_medio_combustivel(valor=0,litros=0 ):
 
 def calcular_custo_manutecao_km(valor=0,km_rodados=0):
     if valor <0 or km_rodados <= 0:
-        return False, 'parametro invalido'
+        return 0
 
     custo_manutencao = valor/km_rodados
 
     return custo_manutencao
 
-def calcular_custo_combustivel_km(valor,km_rodados):
+def calcular_custo_combustivel_km(valor=0,km_rodados=0):
     if valor <0 or km_rodados < 0:
-        return False, 'parametro invalido'
+        return 0
 
     custo_combustivel = valor/km_rodados
 
@@ -24,7 +24,7 @@ def calcular_custo_combustivel_km(valor,km_rodados):
 
 def calcular_custo_total_km(valor1,valor2):
     if valor1 < 0 or valor2 < 0:
-        return False, 'parametro invalido'
+        return 0
 
     custo_km = valor1+valor2
     return custo_km
@@ -32,7 +32,7 @@ def calcular_custo_total_km(valor1,valor2):
 
 def calcular_lucro_liquido(bruto,km_rodados,custo_km):
     if bruto <0 or km_rodados <0 or custo_km <0:
-        return False, 'parametro invalido'
+        return 0
 
     custo_total = custo_km*km_rodados
     liquido = bruto - custo_total
@@ -48,9 +48,9 @@ def calcular_consumo_medio_real(historico):
         km_total += i[0]
         litros_total += i[1]
     if km_total <= 0:
-        return False, 'quilometragem invalida'
+        return 0
     if litros_total <= 0:
-        return False , 'litragem invalida'
+        return 0
     consumo_medio = km_total / litros_total
 
     return consumo_medio
