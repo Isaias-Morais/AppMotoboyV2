@@ -41,3 +41,6 @@ def listar_moto():
         print(moto)
 
     conn.close()
+
+def excluir_moto(moto_id):
+    pass

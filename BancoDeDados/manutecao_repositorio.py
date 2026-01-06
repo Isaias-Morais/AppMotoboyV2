@@ -39,3 +39,7 @@ def listar_manutencao():
 
     for manutencao in manutencoes:
         print(manutencao)
+
+
+def excluir_manutencao(moto_id):
+    pass

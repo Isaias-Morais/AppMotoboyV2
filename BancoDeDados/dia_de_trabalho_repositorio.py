@@ -38,3 +38,7 @@ def listar_dia_de_trabalho():
 
     for dia in dias:
         print(dia)
+
+
+def excluir_dias_trabalhados(moto_id):
+    pass

@@ -25,3 +25,6 @@ def registra_moto(
             motoboy_id=1)
         salvar_moto(moto)
         return moto
+
+
+def exluri_moto(moto_id):
