@@ -41,4 +41,16 @@ def listar_dia_de_trabalho():
 
 
 def excluir_dias_trabalhados(moto_id):
-    pass
+    conn = get_conexao()
+    curso = conn.cursor()
+
+    sql = '''
+          DELETE 
+          FROM dia_de_trabalho
+          WHERE moto_id = ? 
+          '''
+
+    curso.execute(sql, (moto_id,))
+
+    conn.commit()
+    conn.close()

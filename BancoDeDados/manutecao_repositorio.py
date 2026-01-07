@@ -42,4 +42,18 @@ def listar_manutencao():
 
 
 def excluir_manutencao(moto_id):
-    pass
+    conn = get_conexao()
+    curso = conn.cursor()
+
+    sql = '''
+          DELETE 
+          FROM manutencao
+          WHERE moto_id = ? 
+          '''
+
+    curso.execute(sql, (moto_id,))
+
+    conn.commit()
+    conn.close()
+
+excluir_manutencao(1)

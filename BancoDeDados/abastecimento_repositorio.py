@@ -43,3 +43,19 @@ def listar_abastecimento():
 
     for abastecimento in abastecimentos:
         print(abastecimento)
+
+def excluir_abastecimentos(moto_id):
+    conn = get_conexao()
+    curso = conn.cursor()
+
+    sql = '''
+    DELETE FROM abastecimento
+    WHERE moto_id = ?
+    '''
+
+    curso.execute(sql,(moto_id,))
+
+    conn.commit()
+    conn.close()
+
+

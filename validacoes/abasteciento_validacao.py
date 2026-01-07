@@ -23,3 +23,4 @@ def validacao_abastecimento(
         return False, f'Digite um id valido'
 
     return True , None
+

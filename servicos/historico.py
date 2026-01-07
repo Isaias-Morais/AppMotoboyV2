@@ -40,7 +40,7 @@ def historico_manutencoes(moto_id):
     return dados
 
 
-def historicos_abastecimentos(moto_id):
+def historico_abastecimentos(moto_id):
     conn = get_conexao()
     cursor = conn.cursor()
     sql = '''
@@ -59,4 +59,6 @@ def historicos_abastecimentos(moto_id):
     conn.close()
 
     return dados
+
+print(historico_manutencoes(1))
 

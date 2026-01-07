@@ -38,3 +38,5 @@ def resumo_dia():
         'lucro':liquido
     }
     return resumo_dia
+
+print(resumo_dia())

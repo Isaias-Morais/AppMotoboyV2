@@ -43,4 +43,16 @@ def listar_moto():
     conn.close()
 
 def excluir_moto(moto_id):
-    pass
+    conn = get_conexao()
+    curso = conn.cursor()
+
+    sql = '''
+          DELETE 
+          FROM moto
+          WHERE id = ? 
+          '''
+
+    curso.execute(sql, (moto_id,))
+
+    conn.commit()
+    conn.close()

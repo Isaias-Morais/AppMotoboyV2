@@ -32,3 +32,15 @@ def definir_moto_ativa(moto_id):
 
     conn.commit()
     conn.close()
+
+def redefinir_moto_ativa():
+    conn = get_conexao()
+    cursor = conn.cursor()
+    sql = '''
+        UPDATE motoboy
+        SET moto_ativa_id = NULL
+        WHERE id = 1
+    '''
+    cursor.execute(sql)
+
+redefinir_moto_ativa()
