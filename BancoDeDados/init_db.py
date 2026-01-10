@@ -12,7 +12,7 @@ def criar_tabela_motoboy():
     curso.execute(
         '''
             CREATE TABLE IF NOT EXISTS motoboy(
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            id INTEGER PRIMARY KEY ,
             nome TEXT NOT NULL,
             idade INTEGER NOT NULL,
             email TEXT NOT NULL,

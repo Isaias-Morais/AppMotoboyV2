@@ -99,3 +99,4 @@ def redefinir_moto_ativa():
         WHERE id = 1
     '''
     cursor.execute(sql)
+

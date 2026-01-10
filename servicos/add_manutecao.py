@@ -8,11 +8,11 @@ def registra_manutencao(
         dia=None,
         mes=None,
         ano=None,
-        tipo='',
-        descricao='',
-        valor='',
-        quilometragem_manutencao=0,
-        moto_id=0
+        tipo=None,
+        descricao=None,
+        valor=None,
+        quilometragem_manutencao=None,
+        moto_id=None
     ):
 
     valido , erro = validacao_manutencao(tipo,descricao,valor,quilometragem_manutencao,moto_id)

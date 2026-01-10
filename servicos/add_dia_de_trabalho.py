@@ -9,10 +9,10 @@ def registra_dia_de_trabalho(
         dia=None,
         mes=None,
         ano=None,
-        km_inicial=0,
-        km_final=0,
-        ganhon_bruto=0,
-        moto_id=0
+        km_inicial=None,
+        km_final=None,
+        ganhon_bruto=None,
+        moto_id=None
     ):
 
     valido , erro = validacao_dia_de_trabalho(km_inicial,km_final,ganhon_bruto,moto_id)

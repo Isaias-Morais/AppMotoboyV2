@@ -9,4 +9,4 @@ class Dia_de_trabalho:
 
 
     def __str__(self):
-        return f'|Data-{self._data}|Km de inicio-{self._km_inicial}|Km final-{self._km_fina1}|Ganho bruto-{self._ganho_bruto}|Moto_{self._moto_id}|'
+        return f'|Data-{self._data}|Km de inicio-{self._km_inicial}|Km final-{self._km_final}|Ganho bruto-{self._ganho_bruto}|Moto-{self._moto_id}|'
