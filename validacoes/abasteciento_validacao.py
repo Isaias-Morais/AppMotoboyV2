@@ -27,7 +27,7 @@ def validacao_abastecimento(
 
 def validacao_consumo(consumo):
 
-    if not isinstance(consumo, (int)) or consumo <= 0 or consumo == None:
+    if not isinstance(consumo, (int,float)) or consumo <= 0 or consumo == None:
         return False
 
     return True
