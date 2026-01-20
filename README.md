@@ -20,7 +20,7 @@ Criar um app simples e funcional que permita ao motoboy:
 * Calcular lucro líquido do dia
 * Visualizar histórico de trabalho
 
-Esse projeto também serve como **portfólio back-end**.
+
 
 ---
 
