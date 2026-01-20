@@ -13,4 +13,3 @@ def atualizar_consumo_svc(moto_id=0,consumo=0):
     atualizar_consumo(moto_id,consumo)
 
 
-print(atualizar_consumo_svc(1,2))

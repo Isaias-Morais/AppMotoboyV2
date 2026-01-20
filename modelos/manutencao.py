@@ -17,4 +17,4 @@ class Manutencao:
         self._quilometragem = quilometragem_manutecao
 
     def __str__(self):
-        return f'data-{self._data},tipo-{self._tipo},valor-{self._valor},quiometragem-{self._km_moto}'
+        return f'data-{self._data},tipo-{self._tipo},valor-{self._valor},quiometragem-{self._quilometragem}'

@@ -22,7 +22,7 @@ moto = busca_moto_ativa()
 resumo = resumo_dia()
 print(f'moto ativa - {moto}')
 for chave, valor in resumo.items():
-    print(f'{chave:<26} : {valor:>26}')
+    print(f'{chave:<26} : {str(valor):>26}')
 
 while True:
 
